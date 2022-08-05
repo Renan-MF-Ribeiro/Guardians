@@ -1,0 +1,73 @@
+<div class="container-fluid text-center">
+  <img class="logo" src="assets/logo.png" alt="" />
+  <form
+    class="form text-center"
+    [formGroup]="cadastro"
+    (ngSubmit)="cadastrar(cadastro.value)"
+  >
+    <mat-form-field>
+      <input matInput placeholder="Email" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Nome" formControlName="nome" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Usuário" formControlName="username" />
+      <mat-hint
+        class="text-danger"
+        *ngIf="cadastro.get('username')?.errors?.['minusculo'] && cadastro.get('username')?.touched"
+        >*Usuário deve ser em letras minúsculas.</mat-hint
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        placeholder="Senha"
+        formControlName="senha"
+      />
+      <span
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+        class="visiility"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </span>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        [type]="hideConfirmacao ? 'password' : 'text'"
+        placeholder="Confirmação de senha"
+        formControlName="senhaConfirmacao"
+      />
+      <span
+        mat-icon-button
+        matSuffix
+        (click)="hideConfirmacao = !hideConfirmacao"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hideConfirmacao"
+        class="visiility"
+      >
+        <mat-icon>{{
+          hideConfirmacao ? "visibility_off" : "visibility"
+        }}</mat-icon>
+      </span> </mat-form-field
+    ><br />
+    <mat-hint class="text-danger" *ngIf="cadastro.errors?.['senhasDiferentes']"
+      >*Senha e Confirmação de senha divergentes</mat-hint
+    >
+    <button
+      mat-raised-button
+      type="submit"
+      class="button"
+      color="accent"
+      [disabled]="!cadastro.valid"
+    >
+      CADASTRAR
+    </button>
+  </form>
+</div>

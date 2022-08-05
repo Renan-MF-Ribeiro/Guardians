@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
+.head {
+  background-image: url("src/assets/background.png");
+  background-position: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 370px;
+}
+.perfil {
+  width: 50%;
+  margin: auto;
+  display: block;
+  position: absolute;
+}
+.imgPerfil {
+  border-radius: 50%;
+  border-color: #a40a16;
+  border-width: 3px;
+  border-style: solid;
+  width: 120px;
+  height: 120px;
+}
+.head p {
+  margin-top: 20px;
+  width: 100%;
+  color: #fff;
+  z-index: 100;
+  font-size: x-large;
+  font-family: "Didact Gothic", sans-serif;
+}
+.body {
+  background-color: #fff;
+  height: 552px;
+}
+.filter {
+  position: absolute;
+  margin-top: -60px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-edit {
+  position: absolute;
+  margin-top: 80px;
+  left: 130px;
+  transform: scale(0.8);
+}
+.button-filter {
+  background-color: #fff;
+  margin: 10px;
+  color: #1d2b3a;
+  /* border-radius: 50px; */
+  border-radius: 10px;
+  height: 60px;
+}
+.filter .material-icons {
+  margin: 15px;
+  color: #a40a16;
+  transform: scale(1.5);
+}
+.pesquisa {
+  margin: 10px;
+  background-color: #fff;
+  /* padding-top: 10px; */
+  border-radius: 10px;
+  align-items: center;
+  width: 50%;
+  padding: 0;
+  height: 60px;
+  box-shadow: 0px 3px 5px rgba(122, 122, 122, 0.77);
+}
+input {
+  width: 100%;
+  background-color: #fff;
+  border-style: none;
+  height: 60px;
+  font-size: medium;
+}
+.reservas {
+  height: 420px;
+  padding-top: 80px;
+}
+.reservas mat-label {
+  margin-left: 50px;
+  font-weight: 700;
+  font-size: large;
+  z-index: 0;
+}
+.carousel {
+  /* margin-top: 15px; */
+  margin-bottom: 25px;
+  z-index: 0;
+}
+.carousel-cell {
+  margin: 20px;
+  z-index: 0;
+}
+
+.full-width .material-icons {
+  transform: scale(2);
+  margin: 15px;
+}
+.button {
+  width: 80%;
+  height: 80px;
+  border-radius: 50px;
+}
+
+.catalogo {
+  width: 100%;
+  background-color: #fff;
+  border-style: none;
+  height: 60px;
+  font-size: medium;
+  margin-top: 50px;
+}

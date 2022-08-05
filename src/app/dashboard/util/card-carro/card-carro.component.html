@@ -1,0 +1,15 @@
+<mat-card class="card">
+  <mat-card-header>
+    <img
+      mat-card-image
+      [src]="carro.imgPath"
+      [alt]="carro.name + ' - ' + carro.year + ' - Guardians'"
+    />
+  </mat-card-header>
+  <mat-card-content class="text-center">
+    <p class="name">{{ carro.name }} - {{ carro.year }}</p>
+    <p>{{ carro.type }}</p>
+    <p>Motor: {{ carro.engine }}</p>
+    <p>{{ carro.size }} Lugares</p>
+  </mat-card-content>
+</mat-card>

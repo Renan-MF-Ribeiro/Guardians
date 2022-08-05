@@ -1,0 +1,19 @@
+<img
+  class="logo-fundo"
+  src="assets/logo-fundo.png"
+  alt="Gardians - Locadora de Automoveis"
+/>
+<div class="router">
+  <router-outlet></router-outlet>
+</div>
+&nbsp;
+<section class="footer">
+  <div class="row text-center">
+    <a class="" routerLink="/cadastro" *ngIf="router.url == '/'"
+      >Ainda não tem cadastro? Cria conta</a
+    >
+    <a class="" routerLink="" *ngIf="router.url == '/cadastro'"
+      >Já tem cadastro? Login</a
+    >
+  </div>
+</section>

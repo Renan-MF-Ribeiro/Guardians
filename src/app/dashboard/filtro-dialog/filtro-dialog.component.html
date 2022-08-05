@@ -1,0 +1,128 @@
+<section class="head">
+  <div class="title">
+    <p>
+      <span class="material-icons"> search </span>
+      BUSCA
+    </p>
+  </div>
+</section>
+<section class="body">
+  <mat-accordion class="example-headers-align" multi>
+    <mat-expansion-panel expanded="true" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Tipos de carrocerias </mat-panel-title>
+        <mat-panel-description>
+          <span class="spacer"></span>
+          <span class="material-icons"> expand_more </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="list-group">
+        <label class="list-group-item" *ngFor="let tipo of tipos">
+          <mat-checkbox
+            class="example-margin"
+            (change)="filtroChange(tipo, tiposFiltros, $event)"
+            [checked]="tiposFiltros.includes(tipo)"
+          >
+            {{ tipo }}
+          </mat-checkbox>
+        </label>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel expanded="true" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Tipos de motores</mat-panel-title>
+        <mat-panel-description>
+          <span class="spacer"></span>
+          <span class="material-icons"> expand_more </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="motores">
+        <button
+          mat-flat-button
+          (click)="filtroChange(motor, motoresFiltos)"
+          class="button"
+          *ngFor="let motor of motores"
+          [ngClass]="[motoresFiltos.includes(motor) ? 'buttonSelected' : '']"
+        >
+          {{ motor }}
+        </button>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel expanded="true" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Quantidade de lugares </mat-panel-title>
+        <mat-panel-description>
+          <span class="spacer"></span>
+          <span class="material-icons"> expand_more </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="lugares">
+        <button
+          mat-flat-button
+          (click)="filtroChange('2', lugaresFiltro)"
+          [ngClass]="[lugaresFiltro.includes('2') ? 'buttonSelected' : '']"
+          class="button-lugares"
+        >
+          02
+        </button>
+        <button
+          mat-flat-button
+          (click)="filtroChange('3', lugaresFiltro)"
+          [ngClass]="[lugaresFiltro.includes('3') ? 'buttonSelected' : '']"
+          class="button-lugares"
+        >
+          03
+        </button>
+        <button
+          mat-flat-button
+          (click)="filtroChange('4', lugaresFiltro)"
+          [ngClass]="[lugaresFiltro.includes('4') ? 'buttonSelected' : '']"
+          class="button-lugares"
+        >
+          04
+        </button>
+        <button
+          mat-flat-button
+          (click)="filtroChange('5', lugaresFiltro)"
+          [ngClass]="[lugaresFiltro.includes('5') ? 'buttonSelected' : '']"
+          class="button-lugares"
+        >
+          05
+        </button>
+        <button
+          mat-flat-button
+          (click)="filtroChange('6', lugaresFiltro)"
+          [ngClass]="[lugaresFiltro.includes('6') ? 'buttonSelected' : '']"
+          class="button-lugares"
+        >
+          06
+        </button>
+        <button
+          mat-flat-button
+          (click)="filtroChange('7', lugaresFiltro)"
+          [ngClass]="[lugaresFiltro.includes('7') ? 'buttonSelected' : '']"
+          class="button-lugares"
+        >
+          07
+        </button>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</section>
+<section class="footer text-center">
+  <button
+    mat-raised-button
+    (click)="
+      dialogRef.close({
+        tipos: tiposFiltros,
+        motores: motoresFiltos,
+        lugares: lugaresFiltro
+      })
+    "
+    color="primary"
+  >
+    APLICAR FILTRO
+  </button>
+</section>

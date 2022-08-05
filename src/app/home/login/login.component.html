@@ -1,0 +1,36 @@
+<div class="container-fluid text-center">
+  <img class="logo" src="assets/logo.png" alt="" />
+  <form
+    class="form text-center"
+    (ngSubmit)="logar(username.value, password.value)"
+  >
+    <mat-form-field>
+      <input matInput placeholder="Username" #username />
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        #password
+        placeholder="Password"
+      />
+      <span
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+        class="visiility"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </span>
+    </mat-form-field>
+    <div class="row">
+      <a class="reset" routerLink="/reset">Esqueci minha senha</a>
+    </div>
+    <button mat-raised-button type="submit" class="button" color="accent">
+      ENTRAR
+    </button>
+  </form>
+</div>

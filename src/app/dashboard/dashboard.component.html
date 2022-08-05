@@ -1,0 +1,84 @@
+<button mat-mini-fab color="accent" (click)="logout()" class="button">
+  <mat-icon>logout</mat-icon>
+</button>
+<router-outlet></router-outlet>
+<section class="footer text-center">
+  <mat-toolbar>
+    <div class="row">
+      <div class="col-3" routerLinkActive="active-link" routerLink="/dashboard">
+        <div class="row">
+          <a>
+            <span
+              routerLinkActive="active-link"
+              routerLink="/dashboard"
+              class="material-icons"
+            >
+              home
+            </span>
+          </a>
+        </div>
+        <div class="row">
+          <p>INÍCIO</p>
+        </div>
+      </div>
+      <div class="col-3" routerLinkActive="active-link" routerLink="/agenda">
+        <div class="row">
+          <a>
+            <span
+              routerLinkActive="active-link"
+              routerLink="/agenda"
+              class="material-icons"
+            >
+              event_note
+            </span>
+          </a>
+        </div>
+        <div class="row">
+          <p>MEUS AGENDAMENTOS</p>
+        </div>
+      </div>
+      <div class="col-2" routerLinkActive="active-link" routerLink="/contato">
+        <div class="row">
+          <a>
+            <span
+              routerLinkActive="active-link"
+              routerLink="/contato"
+              class="material-icons"
+            >
+              contact_phone
+            </span>
+          </a>
+        </div>
+        <div class="row">
+          <p>CENTRAL</p>
+        </div>
+      </div>
+      <div class="col-2" routerLinkActive="active-link" routerLink="/perfil">
+        <div class="row">
+          <a>
+            <span
+              routerLinkActive="active-link"
+              routerLink="/perfil"
+              class="material-icons"
+            >
+              person_outline
+            </span>
+          </a>
+        </div>
+        <div class="row">
+          <p>PERFIL</p>
+        </div>
+      </div>
+      <div class="col-2" (click)="abrirCatalogo()">
+        <div class="row">
+          <a>
+            <span class="material-icons"> menu_book </span>
+          </a>
+        </div>
+        <div class="row">
+          <p>CATALAGO</p>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar>
+</section>

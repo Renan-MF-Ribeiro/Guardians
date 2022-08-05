@@ -1,0 +1,37 @@
+.logo {
+  margin-top: 180px;
+}
+mat-form-field {
+  max-height: 70px;
+  background-color: #fff;
+  width: 300px;
+  font-size: larger;
+  /* padding-top: 10px; */
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 2vw;
+  border-radius: 50px;
+}
+.row {
+  width: 330px;
+  text-align: start;
+  margin-left: 75px;
+}
+a {
+  color: #fff;
+  font-size: medium;
+}
+.form {
+  margin-top: 60px;
+}
+
+.button {
+  margin-top: 50px;
+  width: 300px;
+  height: 60px;
+  font-size: x-large;
+  border-radius: 50px;
+}
+::ng-deep .mat-form-field-underline {
+  display: none;
+}

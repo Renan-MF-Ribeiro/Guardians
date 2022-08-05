@@ -1,0 +1,17 @@
+.logo-fundo {
+  position: fixed;
+  right: -65px;
+  top: -40px;
+}
+.row {
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+}
+a {
+  color: #fff;
+}
+.router {
+  height: 90%;
+  margin-bottom: 30px;
+}

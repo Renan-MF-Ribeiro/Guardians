@@ -1,0 +1,27 @@
+<div class="container-fluid text-center">
+  <img class="logo" src="assets/logo.png" alt="" />
+  <form class="form text-center" (ngSubmit)="reset(email.value)">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Email Cadastrado"
+        #email
+        required
+        type="email"
+      />
+    </mat-form-field>
+
+    <div class="row">
+      <a class="reset" routerLink="">Login</a>
+    </div>
+  </form>
+  <button
+    mat-raised-button
+    type="submit"
+    class="button"
+    color="accent"
+    [disabled]="!email.checkValidity()"
+  >
+    RECUPERAR SENHA
+  </button>
+</div>

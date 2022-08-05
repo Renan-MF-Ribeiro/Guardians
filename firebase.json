@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "target":"guardians",
+    "public": "dist/guardians",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

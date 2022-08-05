@@ -1,0 +1,21 @@
+export const propriedades = {
+  tipos: [
+    'Hatch compacto',
+    'Hatch médio',
+    'SUV compacto',
+    'SUV médio',
+    'SUV grande',
+    'Crossover',
+    'Coupé',
+    'Picape leve',
+    'Picape leve-média',
+    'Picape média',
+    'Sedan compacto',
+    'Sedan médio',
+    'Sedan grande',
+    'Mini/monovolume',
+    'Utilitário leve',
+    'Utilitário',
+  ],
+  motores: ['Motor 1.0', 'Motor 1.4', 'Motor 1.6', 'Motor 1.8', 'Motor 2.0'],
+};

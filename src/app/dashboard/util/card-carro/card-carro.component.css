@@ -1,0 +1,10 @@
+.name {
+  font-weight: 700;
+}
+.card {
+  border-radius: 30px;
+  box-shadow: 0 7px 9px #9797976b;
+}
+mat-card-header {
+  height: 100px;
+}

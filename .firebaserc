@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "guardians-happmobi"
+  },
+  "targets": {
+    "guardians-3048f": {
+      "hosting": {
+        "guardians": [
+          "guardians-happmobi"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
