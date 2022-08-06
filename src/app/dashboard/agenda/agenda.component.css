@@ -2,5 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 800px;
+  height: 462px;
+}
+img {
+  width: 100%;
 }

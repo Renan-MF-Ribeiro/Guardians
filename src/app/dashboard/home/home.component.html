@@ -1,15 +1,15 @@
 <section class="head text-center">
-  <div class="perfil">
-    <img
-      [src]="usuario.imgPerfil"
-      class="imgPerfil"
-      alt="Imagem de perfil Guardians"
-    />
+  <div class="perfil text-center">
+    <div
+      class="imgPerfil mat-card-avatar"
+      [ngStyle]="{ 'background-image': 'url(' + usuario.imgPerfil + ')' }"
+    >
+      <!-- <img [src]="usuario.imgPerfil" alt="Imagem de perfil Guardians" /> -->
+    </div>
     <input
       #fotoPerfilInput
       type="file"
       accept="image/*"
-      capture="environment"
       style="display: none"
       (change)="fotoPerfil($event)"
     />
@@ -41,9 +41,8 @@
       </div>
     </div>
 
-    <button mat-raised-button class="button-filter">
-      <span class="material-icons" (click)="filtrar()"> filter_list </span
-      >Filtrar
+    <button mat-raised-button class="button-filter" (click)="filtrar()">
+      <span class="material-icons"> filter_list </span>Filtrar
     </button>
   </div>
   <div class="reservas" *ngIf="!filtrado.length">
@@ -63,7 +62,11 @@
         Ver Catálogo
         <span
           class="material-icons"
-          (click)="dialog.open(DialogCatalagoComponent)"
+          (click)="
+            dialog.open(DialogCatalagoComponent, {
+              panelClass: 'custom-dialog-container'
+            })
+          "
         >
           menu_book
         </span>

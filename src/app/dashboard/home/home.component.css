@@ -14,12 +14,21 @@
   position: absolute;
 }
 .imgPerfil {
+  margin-left: 50px;
   border-radius: 50%;
   border-color: #a40a16;
   border-width: 3px;
   border-style: solid;
   width: 120px;
   height: 120px;
+  background-size: cover;
+  background-position: center;
+}
+.button-edit {
+  position: absolute;
+  margin-top: -40px;
+  left: 130px;
+  transform: scale(0.8);
 }
 .head p {
   margin-top: 20px;
@@ -41,12 +50,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.button-edit {
-  position: absolute;
-  margin-top: 80px;
-  left: 130px;
-  transform: scale(0.8);
 }
 .button-filter {
   background-color: #fff;
@@ -96,6 +99,7 @@ input {
 }
 .carousel-cell {
   margin: 20px;
+  margin-left: 50px;
   z-index: 0;
 }
 

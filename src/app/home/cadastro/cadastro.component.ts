@@ -39,8 +39,7 @@ export class CadastroComponent implements OnInit {
   cadastrar(user: User) {
     user.imgPerfil = 'assets/person.png';
     this.userService.cadastrar(user).subscribe(
-      (sucess) => {
-        console.log(sucess);
+      () => {
         alert('Cadastrado com Sucesso');
         this.router.navigateByUrl('');
       },

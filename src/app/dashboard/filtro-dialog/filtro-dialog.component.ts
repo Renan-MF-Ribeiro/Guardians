@@ -66,5 +66,8 @@ export class FiltroDialogComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let a = 'ss';
+    a.slice(a.indexOf(': '));
+  }
 }

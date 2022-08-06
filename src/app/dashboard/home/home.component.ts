@@ -52,7 +52,9 @@ export class HomeComponent implements OnInit {
         });
         result.motores.forEach((motor: string) => {
           this.filtrado = this.filtrado.concat(
-            this.carros.filter((carro) => carro.engine == motor)
+            this.carros.filter(
+              (carro) => carro.engine == motor.slice(motor.indexOf(':') + 2)
+            )
           );
         });
         result.lugares.forEach((lugares: string) => {
@@ -60,7 +62,6 @@ export class HomeComponent implements OnInit {
             this.carros.filter((carro) => carro.size == lugares)
           );
         });
-        console.log(this.filtrado);
       }
     });
   }

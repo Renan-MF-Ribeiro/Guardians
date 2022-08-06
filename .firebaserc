@@ -1,12 +1,12 @@
 {
   "projects": {
-    "default": "guardians-happmobi"
+    "default": "guardians-3048f"
   },
   "targets": {
     "guardians-3048f": {
       "hosting": {
         "guardians": [
-          "guardians-happmobi"
+          "happmobi-guardians"
         ]
       }
     }

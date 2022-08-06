@@ -17,7 +17,9 @@ export class DashboardComponent implements OnInit {
   }
 
   abrirCatalogo() {
-    this.dialog.open(DialogCatalagoComponent);
+    this.dialog.open(DialogCatalagoComponent, {
+      panelClass: 'custom-dialog-container',
+    });
   }
 
   ngOnInit(): void {}

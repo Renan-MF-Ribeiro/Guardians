@@ -5,8 +5,7 @@
 }
 .row {
   width: 100%;
-  position: absolute;
-  bottom: 15px;
+  margin-bottom: 15px;
 }
 a {
   color: #fff;

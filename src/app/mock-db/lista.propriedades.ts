@@ -17,5 +17,11 @@ export const propriedades = {
     'Utilitário leve',
     'Utilitário',
   ],
-  motores: ['Motor 1.0', 'Motor 1.4', 'Motor 1.6', 'Motor 1.8', 'Motor 2.0'],
+  motores: [
+    'Motor: 1.0',
+    'Motor: 1.4',
+    'Motor: 1.6',
+    'Motor: 1.8',
+    'Motor: 2.0',
+  ],
 };
