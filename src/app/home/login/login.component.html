@@ -5,26 +5,11 @@
     (ngSubmit)="logar(username.value, password.value)"
   >
     <mat-form-field>
-      <input matInput placeholder="Username" #username />
+      <input matInput placeholder="Usuário" #username />
     </mat-form-field>
 
     <mat-form-field>
-      <input
-        matInput
-        [type]="hide ? 'password' : 'text'"
-        #password
-        placeholder="Password"
-      />
-      <span
-        mat-icon-button
-        matSuffix
-        (click)="hide = !hide"
-        [attr.aria-label]="'Hide password'"
-        [attr.aria-pressed]="hide"
-        class="visiility"
-      >
-        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
-      </span>
+      <input matInput type="password" #password placeholder="Senha" />
     </mat-form-field>
     <div class="row">
       <a class="reset" routerLink="/reset">Esqueci minha senha</a>

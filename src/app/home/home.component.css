@@ -10,7 +10,12 @@
 a {
   color: #fff;
 }
-.router {
-  height: 90%;
-  margin-bottom: 30px;
+.footer {
+  display: flex;
+  align-items: flex-end;
+  height: 100px;
+  padding-top: 30px;
+  width: 100%;
+  position: fixed;
+  bottom: 15px;
 }

@@ -4,25 +4,31 @@
 mat-form-field {
   max-height: 70px;
   background-color: #fff;
-  width: 300px;
+  width: 100%;
   font-size: larger;
   /* padding-top: 10px; */
   padding-left: 30px;
   padding-right: 30px;
   margin: 2vw;
   border-radius: 50px;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .row {
-  width: 330px;
+  padding-left: 30px;
+  width: 100%;
   text-align: start;
-  margin-left: 75px;
 }
 a {
   color: #fff;
-  font-size: medium;
+  font-size: small;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .form {
-  margin-top: 60px;
+  margin: 30px;
 }
 
 .button {
@@ -31,6 +37,8 @@ a {
   height: 60px;
   font-size: x-large;
   border-radius: 50px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 ::ng-deep .mat-form-field-underline {
   display: none;
