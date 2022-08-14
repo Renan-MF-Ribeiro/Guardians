@@ -2,12 +2,14 @@
 .head {
   background-image: url("src/assets/background.png");
   background-position: right;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 370px;
+  height: 344px;
 }
 .perfil {
+  padding-top: 30px;
   width: 50%;
   margin: auto;
   display: block;
@@ -17,7 +19,7 @@
   margin-left: 50px;
   border-radius: 50%;
   border-color: #a40a16;
-  border-width: 3px;
+  border-width: 1.5px;
   border-style: solid;
   width: 120px;
   height: 120px;
@@ -31,39 +33,46 @@
   transform: scale(0.8);
 }
 .head p {
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%;
   color: #fff;
   z-index: 100;
-  font-size: x-large;
-  font-family: "Didact Gothic", sans-serif;
+  font-size: 21px;
+  font-family: poppins, sans-serif;
+}
+.head .nome {
+  font-size: 21px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
 }
 .body {
   background-color: #fff;
-  height: 552px;
+  height: 430px;
 }
 .filter {
   position: absolute;
-  margin-top: -60px;
+  margin-top: -50px;
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.filter .icon {
+  margin-right: 15px;
+}
+
 .button-filter {
   background-color: #fff;
   margin: 10px;
   color: #1d2b3a;
   /* border-radius: 50px; */
   border-radius: 10px;
-  height: 60px;
+  height: 50px;
+  font-family: poppins, sans-serif;
 }
-.filter .material-icons {
-  margin: 15px;
-  color: #a40a16;
-  transform: scale(1.5);
-}
+
 .pesquisa {
   margin: 10px;
   background-color: #fff;
@@ -72,52 +81,43 @@
   align-items: center;
   width: 50%;
   padding: 0;
-  height: 60px;
-  box-shadow: 0px 3px 5px rgba(122, 122, 122, 0.77);
+  height: 50px;
+  box-shadow: 0px 3px 5px rgba(182, 181, 181, 0.77);
+  font-size: 14px;
 }
 input {
   width: 100%;
   background-color: #fff;
   border-style: none;
-  height: 60px;
+  height: 46px;
   font-size: medium;
+  font-size: 14px;
+  font-family: poppins, sans-serif;
 }
 .reservas {
-  height: 420px;
+  height: 330px;
   padding-top: 80px;
+  margin-bottom: 10px;
 }
 .reservas mat-label {
   margin-left: 50px;
   font-weight: 700;
-  font-size: large;
+  font-size: 16px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   z-index: 0;
 }
 .carousel {
-  /* margin-top: 15px; */
-  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+
   z-index: 0;
-}
-.carousel-cell {
-  margin: 20px;
-  margin-left: 50px;
-  z-index: 0;
+  padding: 0 40px;
 }
 
-.full-width .material-icons {
-  transform: scale(2);
-  margin: 15px;
-}
 .button {
   width: 80%;
-  height: 80px;
+  height: 70px;
   border-radius: 50px;
-}
-
-.catalogo {
-  width: 100%;
-  background-color: #fff;
-  border-style: none;
-  height: 60px;
-  font-size: medium;
-  margin-top: 50px;
+  font-family: poppins, sans-serif;
 }

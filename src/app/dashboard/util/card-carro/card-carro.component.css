@@ -1,10 +1,33 @@
+:host {
+  display: block;
+  left: 0;
+  width: min-content;
+  height: min-content;
+}
+
 .name {
   font-weight: 700;
 }
 .card {
   border-radius: 30px;
-  box-shadow: 0 7px 9px #9797976b;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
+
+  border-width: 0;
+  height: 165px;
+  width: 145px;
+  padding: 0;
+  margin: 5px;
 }
-mat-card-header {
-  height: 100px;
+
+p {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 10px;
+  height: 18px;
+}
+.row {
+  height: 85px;
+  border-radius: 30px;
+  width: 100%;
+  margin: 0;
 }

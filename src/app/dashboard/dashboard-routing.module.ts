@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AgendaComponent } from './agenda/agenda.component';
 import { ContatoComponent } from './contato/contato.component';
 import { DashboardComponent } from './dashboard.component';
+import { FiltroDialogComponent } from './filtro-dialog/filtro-dialog.component';
 import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
 
@@ -18,6 +19,7 @@ const routes: Routes = [
       { path: 'agenda', component: AgendaComponent },
       { path: 'contato', component: ContatoComponent },
       { path: 'perfil', component: PerfilComponent },
+      { path: 'filtro', component: FiltroDialogComponent },
     ],
   },
 ];

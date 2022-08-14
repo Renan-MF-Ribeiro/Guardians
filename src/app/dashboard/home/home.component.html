@@ -3,9 +3,7 @@
     <div
       class="imgPerfil mat-card-avatar"
       [ngStyle]="{ 'background-image': 'url(' + usuario.imgPerfil + ')' }"
-    >
-      <!-- <img [src]="usuario.imgPerfil" alt="Imagem de perfil Guardians" /> -->
-    </div>
+    ></div>
     <input
       #fotoPerfilInput
       type="file"
@@ -19,20 +17,20 @@
       (click)="fotoPerfilInput.click()"
       class="button-edit"
     >
-      <mat-icon>edit</mat-icon>
+      <span class="material-icons"> edit </span>
     </button>
     <p>
-      Olá, <b>{{ usuario.nome }}</b>
+      Olá, <span class="nome">{{ usuario.nome }}</span>
     </p>
   </div>
 </section>
 <section class="body">
   <div class="filter text-center">
     <div class="row pesquisa">
-      <div class="col-3">
-        <mat-icon matPrefix class="material-icons"> search </mat-icon>
+      <div class="col-2">
+        <img class="icon" src="assets/busca.png" alt="buscar carro" />
       </div>
-      <div class="col-9">
+      <div class="col-10">
         <input
           (keyup)="buscar(busca.value)"
           #busca
@@ -41,14 +39,18 @@
       </div>
     </div>
 
-    <button mat-raised-button class="button-filter" (click)="filtrar()">
-      <span class="material-icons"> filter_list </span>Filtrar
+    <button mat-raised-button class="button-filter" routerLink="/filtro">
+      <img class="icon" src="assets/filtro.png" alt="filtrar carro" />Filtrar
     </button>
   </div>
   <div class="reservas" *ngIf="!filtrado.length">
     <mat-label>Últimas reservas</mat-label>
 
-    <carousel [height]="height" *ngIf="usuario.ultimasReservas?.length">
+    <carousel
+      [height]="190"
+      [cellWidth]="150"
+      *ngIf="usuario.ultimasReservas?.length"
+    >
       <div
         class="carousel-cell"
         *ngFor="let carroID of usuario.ultimasReservas"
@@ -58,25 +60,12 @@
     </carousel>
     <div class="catalogo text-center" *ngIf="!usuario.ultimasReservas?.length">
       <p>Nenhuma reserva efetuada.</p>
-      <button mat-raised-button>
-        Ver Catálogo
-        <span
-          class="material-icons"
-          (click)="
-            dialog.open(DialogCatalagoComponent, {
-              panelClass: 'custom-dialog-container'
-            })
-          "
-        >
-          menu_book
-        </span>
-      </button>
     </div>
   </div>
   <div class="reservas" *ngIf="filtrado.length">
     <mat-label>Veículos Filtrados</mat-label>
 
-    <carousel [height]="height">
+    <carousel [height]="190" [cellWidth]="150" [objectFit]="'contain'">
       <div class="carousel-cell" *ngFor="let carro of filtrado">
         <app-card-carro [carro]="carro"></app-card-carro>
       </div>
@@ -96,8 +85,7 @@
       mat-flat-button
       color="primary"
     >
-      <span class="material-icons"> qr_code_scanner </span>&nbsp; Acessar por QR
-      code
+      <img src="assets/qrcode.png" alt="" />&nbsp; Acessar por <b>QR code</b>
     </button>
   </div>
 </section>

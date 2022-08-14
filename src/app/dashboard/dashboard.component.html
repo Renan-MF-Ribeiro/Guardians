@@ -1,86 +1,21 @@
 <button mat-mini-fab color="accent" (click)="logout()" class="button">
-  <mat-icon>logout</mat-icon>
+  <span class="material-icons"> logout </span>
 </button>
-<router-outlet></router-outlet>
-<section class="footer text-center">
+<router-outlet da></router-outlet>
+<section class="footer text-center" *ngIf="router.url != '/filtro'">
   <mat-toolbar>
     <div class="row">
-      <div class="col-3" routerLinkActive="active-link" routerLink="/dashboard">
-        <div class="row">
-          <a>
-            <span
-              routerLinkActive="active-link"
-              routerLink="/dashboard"
-              class="material-icons"
-            >
-              home
-            </span>
-          </a>
-        </div>
-        <div class="row">
-          <p>INÍCIO</p>
-        </div>
+      <div class="col-3" routerLink="/dashboard">
+        <a routerLinkActive="active-link " class="icon inicio"> </a>
       </div>
-      <div class="col-3" routerLinkActive="active-link" routerLink="/agenda">
-        <div class="row justify-content-center">
-          <a>
-            <span
-              routerLinkActive="active-link"
-              routerLink="/agenda"
-              class="material-icons"
-            >
-              event_note
-            </span>
-          </a>
-        </div>
-        <div class="row">
-          <p>
-            MEUS <br />
-            AGENDAMENTOS
-          </p>
-        </div>
+      <div class="col-4" routerLink="/agenda">
+        <a routerLinkActive="active-link" class="iconAgenda agenda"> </a>
       </div>
-      <div class="col-2" routerLinkActive="active-link" routerLink="/contato">
-        <div class="row">
-          <a>
-            <span
-              routerLinkActive="active-link"
-              routerLink="/contato"
-              class="material-icons"
-            >
-              contact_phone
-            </span>
-          </a>
-        </div>
-        <div class="row">
-          <p>CENTRAL</p>
-        </div>
+      <div class="col-2" routerLink="/contato">
+        <a routerLinkActive="active-link" class="icon central"> </a>
       </div>
-      <div class="col-2" routerLinkActive="active-link" routerLink="/perfil">
-        <div class="row">
-          <a>
-            <span
-              routerLinkActive="active-link"
-              routerLink="/perfil"
-              class="material-icons"
-            >
-              person_outline
-            </span>
-          </a>
-        </div>
-        <div class="row">
-          <p>PERFIL</p>
-        </div>
-      </div>
-      <div class="col-2" (click)="abrirCatalogo()">
-        <div class="row">
-          <a>
-            <span class="material-icons"> menu_book </span>
-          </a>
-        </div>
-        <div class="row">
-          <p>CATALAGO</p>
-        </div>
+      <div class="col-3" routerLink="/perfil">
+        <a routerLinkActive="active-link" class="icon perfilIcon"> </a>
       </div>
     </div>
   </mat-toolbar>

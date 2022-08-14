@@ -3,7 +3,7 @@ import { User } from '../models/user.model';
 export var users: User[] = [
   {
     email: 'teste@teste.com',
-    nome: 'Teste Guardians',
+    nome: 'Marcos Silva',
     username: 'teste',
     senha: '123',
     ultimasReservas: randomReserva(),

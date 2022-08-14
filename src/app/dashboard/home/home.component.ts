@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Carro } from 'src/app/models/carro.model';
 import { Filtros } from 'src/app/models/filtros.model';
 import { User } from 'src/app/models/user.model';
 import { CarrosService } from 'src/app/services/carros.service';
-import { DialogCatalagoComponent } from '../dialog-catalago/dialog-catalago.component';
-import { FiltroDialogComponent } from '../filtro-dialog/filtro-dialog.component';
+import { FiltroService } from '../util/filter.service';
 import { getBase64 } from '../util/toBase64';
 
 @Component({
@@ -16,12 +14,14 @@ import { getBase64 } from '../util/toBase64';
 })
 export class HomeComponent implements OnInit {
   usuario!: User;
-  height = 280;
+
   filtrado: Carro[] = [];
   carros: Carro[] = [];
   filtros!: Filtros;
-  DialogCatalagoComponent = DialogCatalagoComponent;
-  constructor(public dialog: MatDialog, private carrosService: CarrosService) {
+  constructor(
+    private carrosService: CarrosService,
+    private filtroService: FiltroService
+  ) {
     this.usuario = JSON.parse(atob(sessionStorage.getItem('token')!)) as User;
   }
 
@@ -32,17 +32,7 @@ export class HomeComponent implements OnInit {
       },
       (erro) => console.log(erro)
     );
-  }
-
-  filtrar() {
-    const dialog = this.dialog.open(FiltroDialogComponent, {
-      data: this.filtros,
-      width: '100%',
-      height: '90%',
-      panelClass: 'custom-dialog-container',
-    });
-    dialog.afterClosed().subscribe((result: Filtros) => {
-      this.filtrado = [];
+    this.filtroService.filtros$.subscribe((result) => {
       if (result) {
         this.filtros = result;
         result.tipos.forEach((tipo: string) => {

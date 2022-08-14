@@ -1,7 +1,9 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Filtros } from 'src/app/models/filtros.model';
 import { CarrosService } from 'src/app/services/carros.service';
+import { FiltroService } from '../util/filter.service';
 
 @Component({
   selector: 'app-filtro-dialog',
@@ -14,21 +16,19 @@ export class FiltroDialogComponent implements OnInit {
   tiposFiltros: string[] = [];
   motoresFiltos: string[] = [];
   lugaresFiltro: string[] = [];
-
   constructor(
-    private carroService: CarrosService,
-    public dialogRef: MatDialogRef<FiltroDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Filtros
+    private filtroService: FiltroService,
+    private carroService: CarrosService
   ) {
     carroService.getPropriedades().subscribe((propriedades: any) => {
       this.tipos = propriedades.tipos;
       this.motores = propriedades.motores;
     });
-    if (data) {
-      this.tiposFiltros = this.data.tipos ?? [];
-      this.motoresFiltos = this.data.motores ?? [];
-      this.lugaresFiltro = this.data.lugares ?? [];
-    }
+    filtroService.filtros$.subscribe((filtros) => {
+      this.tiposFiltros = filtros?.tipos ?? [];
+      this.motoresFiltos = filtros?.motores ?? [];
+      this.lugaresFiltro = filtros?.lugares ?? [];
+    });
   }
 
   filtroChange(filtro: string, filtros: string[], e?: any) {
@@ -64,6 +64,10 @@ export class FiltroDialogComponent implements OnInit {
         break;
       }
     }
+  }
+
+  filtrar(filtro: Filtros) {
+    this.filtroService.addFiltro(filtro);
   }
 
   ngOnInit(): void {

@@ -1,7 +1,7 @@
 <section class="head">
   <div class="title">
     <p>
-      <span class="material-icons"> search </span>
+      <img src="assets/busca.png" alt="" />
       BUSCA
     </p>
   </div>
@@ -18,18 +18,21 @@
       </mat-expansion-panel-header>
       <div class="list-group">
         <label class="list-group-item" *ngFor="let tipo of tipos">
-          <mat-checkbox
-            class="example-margin"
-            (change)="filtroChange(tipo, tiposFiltros, $event)"
-            [checked]="tiposFiltros.includes(tipo)"
-          >
-            {{ tipo }}
-          </mat-checkbox>
+          <div class="inputCheckbox">
+            <input
+              #checkBox
+              type="checkbox"
+              class="example-margin"
+              (change)="filtroChange(tipo, tiposFiltros, checkBox)"
+              [checked]="tiposFiltros.includes(tipo)"
+            />
+          </div>
+          {{ tipo }}
         </label>
       </div>
     </mat-expansion-panel>
 
-    <mat-expansion-panel expanded="true" hideToggle>
+    <mat-expansion-panel expanded="true" hideToggle class="motores">
       <mat-expansion-panel-header>
         <mat-panel-title>Tipos de motores</mat-panel-title>
         <mat-panel-description>
@@ -114,14 +117,15 @@
 <section class="footer text-center">
   <button
     mat-raised-button
+    color="primary"
     (click)="
-      dialogRef.close({
+      filtrar({
         tipos: tiposFiltros,
         motores: motoresFiltos,
         lugares: lugaresFiltro
       })
     "
-    color="primary"
+    [routerLink]="['/dashboard']"
   >
     APLICAR FILTRO
   </button>

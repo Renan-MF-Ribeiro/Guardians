@@ -6,12 +6,11 @@ import { HomeComponent } from './home/home.component';
 import { FiltroDialogComponent } from './filtro-dialog/filtro-dialog.component';
 import { AngularMaterialModule } from '../angular-material.module';
 import { CardCarroComponent } from './util/card-carro/card-carro.component';
-import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { ContatoComponent } from './contato/contato.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { DashboardComponent } from './dashboard.component';
-import { DialogCatalagoComponent } from './dialog-catalago/dialog-catalago.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -22,9 +21,8 @@ import { DialogCatalagoComponent } from './dialog-catalago/dialog-catalago.compo
     ContatoComponent,
     AgendaComponent,
     PerfilComponent,
-    DialogCatalagoComponent,
   ],
-  entryComponents: [FiltroDialogComponent, DialogCatalagoComponent],
+  entryComponents: [FiltroDialogComponent],
   imports: [
     CommonModule,
     DashboardRoutingModule,

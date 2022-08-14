@@ -10,12 +10,16 @@
 a {
   color: #fff;
 }
+.weidth {
+  font-weight: 510;
+}
 .footer {
   display: flex;
   align-items: flex-end;
-  height: 100px;
-  padding-top: 30px;
   width: 100%;
-  position: fixed;
-  bottom: 15px;
+  position: absolute;
+  bottom: 58px;
+  font-family: poppins, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

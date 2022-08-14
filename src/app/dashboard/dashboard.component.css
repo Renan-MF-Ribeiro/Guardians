@@ -25,16 +25,46 @@ mat-toolbar {
   margin: 5px;
 }
 
-.active-link {
-  color: #a40a16;
+.inicio {
+  background-color: black;
+  -webkit-mask: url("../../assets/inicio.svg") no-repeat center;
+  mask: url("../../assets/inicio.svg") no-repeat center;
 }
 
+.agenda {
+  background-color: black;
+  -webkit-mask: url("../../assets/agenda.svg") no-repeat center;
+  mask: url("../../assets/agenda.svg") no-repeat center;
+}
+.central {
+  background-color: black;
+  -webkit-mask: url("../../assets/central.svg") no-repeat center;
+  mask: url("../../assets/central.svg") no-repeat center;
+}
+.perfilIcon {
+  background-color: black;
+  -webkit-mask: url("../../assets/perfil.svg") no-repeat center;
+  mask: url("../../assets/perfil.svg") no-repeat center;
+}
+.iconAgenda {
+  width: 120px;
+  height: 50px;
+}
+.icon {
+  width: 60px;
+  height: 50px;
+}
+
+.active-link {
+  background-color: #a40a16;
+}
 .footer p {
   font-size: xx-small;
   width: 100%;
   overflow-wrap: break-word;
 }
 .col-3,
+.col-4,
 .col-2 {
   display: flex;
   flex-direction: column;

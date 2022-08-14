@@ -34,7 +34,9 @@
         [attr.aria-pressed]="hide"
         class="visiility"
       >
-        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        <span class="material-icons">{{
+          hide ? "visibility_off" : "visibility"
+        }}</span>
       </span>
     </mat-form-field>
     <mat-form-field>
@@ -52,9 +54,9 @@
         [attr.aria-pressed]="hideConfirmacao"
         class="visiility"
       >
-        <mat-icon>{{
+        <span class="material-icons">{{
           hideConfirmacao ? "visibility_off" : "visibility"
-        }}</mat-icon>
+        }}</span>
       </span> </mat-form-field
     ><br />
     <mat-hint class="text-danger" *ngIf="cadastro.errors?.['senhasDiferentes']"
